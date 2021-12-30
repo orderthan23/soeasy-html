@@ -81,6 +81,7 @@ section{
     z-index: 1;
     min-height : 760px;
     margin-bottom : 100px;
+    position: relative;
 }
 
 
