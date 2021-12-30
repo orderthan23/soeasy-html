@@ -39,11 +39,11 @@
 
     #formArea .form-control > input {
         width: 200px;
-        border : 1px solid #c4c4c4;
+        border: 1px solid #c4c4c4;
         border-radius: 5px;
-        height : 25px;
-        padding-left : 10px;
-        padding-right : 10px;
+        height: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     #loginBtn {
@@ -60,8 +60,9 @@
         border: none;
         margin-top: 50px;
     }
-    #loginBtn:hover{
-        color : white;
+
+    #loginBtn:hover {
+        color: white;
     }
 
     #findArea, #findArea > li {
@@ -78,7 +79,6 @@
     }
 
 
-
     #findArea {
         display: flex;
         justify-content: center;
@@ -92,32 +92,36 @@
         display: block;
     }
 
-    #logoTitle{
-        margin-top : 100px;
+    #logoTitle {
+        margin-top: 100px;
         text-align: center;
     }
 
-    #findTab{
-        width : 100%;
-        display : flex;
+    #findTab {
+        width: 100%;
+        display: flex;
         justify-content: space-between;
-        height : 50px;
-        margin-bottom : 30px;
+        height: 50px;
+        margin-bottom: 30px;
     }
-    #loginBox  h3{
-        margin-bottom : 50px;
+
+    #loginBox h3 {
+        margin-bottom: 50px;
     }
-    #findTab a{
-        display : block;
-        width : 50%;
-        background : #c4c4c4;
-        line-height : 50px;
+
+    #findTab a {
+        display: block;
+        width: 50%;
+        background: #c4c4c4;
+        line-height: 50px;
     }
-    #findTab a:hover{
-        color : white;
+
+    #findTab a:hover {
+        color: white;
     }
-    #findTab a.active{
-        background : #3DB6AE;
+
+    #findTab a.active {
+        background: #3DB6AE;
     }
 
 </style>
@@ -128,6 +132,45 @@
     <!--HEADER START-->
     <header>
         <div id="inputArea">
+            <button id='toggleMenu'>
+                <span class='bar'></span>
+                <span class='bar'></span>
+                <span class='bar'></span>
+            </button>
+            <div id="navWrap">
+                <h1></h1>
+                <ul class='megaMenu'>
+                    <li class="infoZone">
+                        <div id="profileZone"></div>
+                    </li>
+                    <li class="infoZone" id="nickNameZone">린가드</li>
+                    <li class="infoZone" id="grade">HOST</li>
+                    <li class="mainTitle">
+                        <a href='#' class="mainNav" id="firstMainNav">예약목록</a>
+                        <ul>
+                            <li class="subTitle"><a href="/login/SelectUserReservHistory" class="subNav" id="firstSubNav">이용 내역 </a></li>
+                            <li class="subTitle"><a href='#' class="subNav" id="secondSubNav">찜 리스트 </a></li>
+                            <li class="subTitle"><a href='#' class="subNav" id="thirdSubNav">리뷰 목록 </a></li>
+                        </ul>
+                    </li>
+                    <li class="mainTitle">
+                        <a href='' class="mainNav" id="secondMainNav">내 공간 관리</a>
+                        <ul>
+                            <li class="subTitle"><a href='/login/views/host/manageReserve/reserveStep1.jsp' class="subNav" id="fourthSubNav">예약 일정 관리</a></li>
+                            <li class="subTitle"><a href='#' class="subNav" id="fifthSubNav">공간 정보 수정</a></li>
+                            <li class="subTitle"><a href='/login/views/host/balance/predict.jsp' class="subNav" id="sixthSubNav">공간정산</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainTitle">
+                        <a href='#' class="mainNav" id="thirdMainNav">기타</a>
+                        <ul>
+                            <li class="subTitle"><a href='/login/views/member/updateMember.jsp' class="subNav" id="seventhSubNav">개인 정보 관리</a></li>
+                            <li class="subTitle"><a href='<%=request.getContextPath() %>/selectList.no' class="subNav" id="eighthSubNav">공지 사항</a></li>
+                            <li class="subTitle"><a href="<%=request.getContextPath()%>/selectList.faq" class="subNav" id="ninthSubNav">Q & A</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
             <img src="/images/logo.png" height="40px"/>
             <div id="inputSearch">
                 <input type="text" placeholder="검색어를 입력해보세요."/>
@@ -135,6 +178,7 @@
 
             </div>
         </div>
+
 
         <div id="subMenus">
             <a>공간 등록</a>
@@ -191,7 +235,7 @@
                 </p>
             </div>
             <div>
-                <img src="/images/logo.png"/>
+                <img src="/images/logo.png" width="130px"/>
             </div>
         </div>
     </footer>
